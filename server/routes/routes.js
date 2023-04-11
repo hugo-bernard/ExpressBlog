@@ -49,7 +49,7 @@ router.post("/postArticle", async (req, res) => {
   }
 });
 
-//Get all Method
+//Get all articles Method
 router.get("/getAll", async (req, res) => {
     try{
         const data = await Article.find();
@@ -61,7 +61,7 @@ router.get("/getAll", async (req, res) => {
 });
 
 
-//Get by ID Method
+//Get by last ten articles Method
 router.get("/getTen", async (req, res) => {
   try{
     const data = await Article.find().limit(10);
@@ -77,7 +77,7 @@ router.patch("/update/", (req, res) => {
   res.send("Update by ID API");
 });
 
-//Delete by ID Method
+//Delete article by ID Method
 router.delete("/deleteArticle:id", async (req, res) => {
   try {
     const data = await Article.findByIdAndDelete(req.params.id);

@@ -16,6 +16,7 @@ const AboutUs = () => {
                         <div className='flex flex-col space-x-4 space-y-4'>
                             <span className='pl-4 text-lg font-bold uppercase border-l-4 border-blue-500'>About this blog</span>
                             <span>This blog site is a project made for the Web Technologies module of Griffith College.</span>
+                            <span>It is build with ExpressJs and ReactJs using Tailwindcss</span>
                             <span>The article are about movies and the datas are all taken from <Link className='text-blue-500 underline underline-offset-2' to='https://www.rottentomatoes.com/'>Rotten Tomatoes</Link>.</span>
                         </div>
                     </div>
