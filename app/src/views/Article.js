@@ -12,28 +12,6 @@ export const Article = () => {
     const [articleId, setArticleId] = useState("")
     const [error, setError] = useState(false)
 
-    const getUserFromToken = async () => {
-        const token = sessionStorage.getItem('userToken');
-        var config = {
-            method: 'get',
-            url: 'http://localhost:3000/api/getUser',
-            headers: { 
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            },
-        };
-        axios(config)
-        .then(function (response) {
-            setArticleId(myObject._id)
-            setIsAdmin(response.data.isAdmin)
-            console.log(articleId)
-            console.log(isAdmin)
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-    }
-
     const eraseArticle = async () => {
         var config = {
             method: 'delete',
@@ -54,6 +32,27 @@ export const Article = () => {
     }
 
     useEffect(() => {
+        const getUserFromToken = async () => {
+            const token = sessionStorage.getItem('userToken');
+            var config = {
+                method: 'get',
+                url: 'http://localhost:3000/api/getUser',
+                headers: { 
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+            };
+            axios(config)
+            .then(function (response) {
+                setArticleId(myObject._id)
+                setIsAdmin(response.data.isAdmin)
+                console.log(articleId)
+                console.log(isAdmin)
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        }
         getUserFromToken()
     }, [searchParams])
 

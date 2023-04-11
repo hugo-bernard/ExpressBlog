@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 export const Authentification = ({title}) => {
@@ -31,9 +31,9 @@ export const Authentification = ({title}) => {
 
     return (
         <div className='flex flex-col w-full'>
-            <div className='text-4xl cursor-default self-left text-main-blue ml-6 mt-4'>My super movie blog</div>
+            <div className='mt-4 ml-6 text-4xl cursor-default self-left text-main-blue'>My super movie blog</div>
             <div className={"flex flex-col justify-center w-3/12 m-auto p-8 shadow-md font-serif rounded-sm shadow-main-blue bg-[#e9fcff]"}>
-            <div className='text-3xl cursor-default self-center text-main-blue'>{title}</div>
+            <div className='self-center text-3xl cursor-default text-main-blue'>{title}</div>
                 <div className='mt-8 space-y-4'>
                     <div>
                         <div className="flex flex-col font-sans text-lg">
@@ -55,7 +55,7 @@ export const Authentification = ({title}) => {
                             onClick={login}>Log in</div>
                     </div>
                 </div>
-                <span className='text-blue-500 text-center w-full mt-4 cursor-pointer' onClick={() => window.location.assign('/signup')}>Sign Up</span>
+                <span className='w-full mt-4 text-center text-blue-500 cursor-pointer' onClick={() => window.location.assign('/signup')}>Sign Up</span>
             </div>
         </div>
     )

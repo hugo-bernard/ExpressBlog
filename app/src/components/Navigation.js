@@ -1,9 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
-    const location = useLocation();
     const [isAdmin, setIsAdmin] = useState(false)
 
     const getUserFromToken = () => {
