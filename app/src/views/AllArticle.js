@@ -25,7 +25,7 @@ const MovieOverview = ({x}) => {
                         <div className='font-bold'>Genre:</div>
                         <div className='flex space-x-2'>
                             {x.genre.map((x, key) => {
-                                return ( <span>{x} </span> )
+                                return ( <span key={key}>{x} </span> )
                             })}
                         </div>
                     </div>
@@ -74,7 +74,7 @@ const AllArticle = () => {
                 <div className='border-gray-400 mt-2 h-[1px] border'/>
                 <div className='flex flex-col w-full mt-6 space-y-4'>
                     {articles.length !== 0 && articles.map((x) => {
-                        return (<MovieOverview x={x}></MovieOverview>)})}
+                        return (<MovieOverview key={x._id} x={x}></MovieOverview>)})}
                 </div>
             </div>
         </div>

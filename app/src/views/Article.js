@@ -6,9 +6,7 @@ import axios from 'axios';
 export const Article = () => {
     const location = useLocation();
 
-    const searchParams = useMemo(() => {
-        return new URLSearchParams(location.search);
-    })
+    const searchParams = new URLSearchParams(location.search);
     const myObject = JSON.parse(searchParams.get('myParam'));
     const [isAdmin, setIsAdmin] = useState(false)
     const [articleId, setArticleId] = useState("")
@@ -56,7 +54,7 @@ export const Article = () => {
             });
         }
         getUserFromToken()
-    }, [searchParams, articleId, isAdmin, myObject])
+    }, [articleId, isAdmin, myObject])
 
     return (
         <div className='flex justify-center w-full mt-12'>
@@ -81,7 +79,7 @@ export const Article = () => {
                                 <div className='font-medium uppercase'>Genre:</div>
                                 <div className='flex space-x-2'>
                                     {myObject.genre.map((x, key) => {
-                                        return ( <span className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x} </span> )
+                                        return ( <span key={key} className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x} </span> )
                                     })}
                                 </div>
                             </div>
@@ -92,7 +90,7 @@ export const Article = () => {
                                 <div className='font-medium uppercase'>Director:</div>
                                 <div className='flex space-x-2'>
                                     {myObject.director.map((x, key) => {
-                                        return ( <span className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x}. </span> )
+                                        return ( <span key={key} className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x}. </span> )
                                     })}
                                 </div>
                             </div>
@@ -100,7 +98,7 @@ export const Article = () => {
                                 <div className='font-medium uppercase'>Producer:</div>
                                 <div className='flex space-x-2'>
                                     {myObject.producer.map((x, key) => {
-                                        return ( <span className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x}. </span> )
+                                        return ( <span key={key} className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x}. </span> )
                                     })}
                                 </div>
                             </div>
@@ -108,7 +106,7 @@ export const Article = () => {
                                 <div className='font-medium uppercase'>Writer:</div>
                                 <div className='flex space-x-2'>
                                     {myObject.writer.map((x, key) => {
-                                        return ( <span className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x}. </span> )
+                                        return ( <span key={key} className='underline decoration-gray-400 underline-offset-2 decoration-1'>{x}. </span> )
                                     })}
                                 </div>
                             </div>
