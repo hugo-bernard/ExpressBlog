@@ -54,7 +54,7 @@ export const Article = () => {
             });
         }
         getUserFromToken()
-    }, [searchParams])
+    }, [searchParams, articleId, isAdmin, myObject])
 
     return (
         <div className='flex justify-center w-full mt-12'>
