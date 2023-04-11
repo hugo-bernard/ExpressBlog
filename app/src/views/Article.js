@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Navigation from '../components/Navigation'
 import { useLocation } from 'react-router-dom'
 import axios from 'axios';
@@ -6,7 +6,9 @@ import axios from 'axios';
 export const Article = () => {
     const location = useLocation();
 
-    const searchParams = new URLSearchParams(location.search);
+    const searchParams = useMemo(() => {
+        return new URLSearchParams(location.search);
+    })
     const myObject = JSON.parse(searchParams.get('myParam'));
     const [isAdmin, setIsAdmin] = useState(false)
     const [articleId, setArticleId] = useState("")
