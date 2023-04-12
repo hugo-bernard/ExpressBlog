@@ -64,7 +64,7 @@ router.get("/getAll", async (req, res) => {
 //Get by last ten articles Method
 router.get("/getTen", async (req, res) => {
   try{
-    const data = await Article.find().maxTimeMS(50000).limit(10);
+    const data = await Article.find().limit(10);
       res.json(data)
     }
   catch(error){

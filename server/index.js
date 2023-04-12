@@ -28,9 +28,11 @@ app.use(express.json());
 
 // Set port on which server will listen
 const port = process.env.PORT || 3000
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Server Started at ${port}`)
 })
+
+server.setTimeout(120000)
 
 // Set route of api call
 app.use('/api', routes)
