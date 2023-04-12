@@ -34,7 +34,3 @@ app.listen(port, () => {
 
 // Set route of api call
 app.use('/api', routes)
-
-// Export the app and the serverless function
-module.exports = app;
-module.exports.handler = serverless(app);
