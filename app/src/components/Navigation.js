@@ -8,7 +8,7 @@ const Navigation = () => {
         const token = sessionStorage.getItem('userToken');
         var config = {
             method: 'get',
-            url: 'http://localhost:3000/api/getUser',
+            url: 'https://render-express-blog.onrender.com/api/getUser',
             headers: { 
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'

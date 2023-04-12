@@ -45,7 +45,7 @@ const AllArticle = () => {
     const getLastTen = async () => {
         var config = {
             method: 'get',
-            url: 'http://localhost:3000/api/getAll',
+            url: 'https://render-express-blog.onrender.com/api/getAll',
             headers: { 
                 'Content-Type': 'application/json'
             }

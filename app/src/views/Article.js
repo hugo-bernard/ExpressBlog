@@ -15,7 +15,7 @@ export const Article = () => {
     const eraseArticle = async () => {
         var config = {
             method: 'delete',
-            url: 'http://localhost:3000/api/deleteArticle' + articleId,
+            url: 'https://render-express-blog.onrender.com/api/deleteArticle' + articleId,
             headers: { 
                 'Content-Type': 'application/json'
             },
@@ -36,7 +36,7 @@ export const Article = () => {
             const token = sessionStorage.getItem('userToken');
             var config = {
                 method: 'get',
-                url: 'http://localhost:3000/api/getUser',
+                url: 'https://render-express-blog.onrender.com/api/getUser',
                 headers: { 
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

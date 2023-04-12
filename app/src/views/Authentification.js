@@ -12,7 +12,7 @@ export const Authentification = ({title}) => {
         });
         var config = {
             method: 'post',
-            url: 'http://localhost:3000/api/login',
+            url: 'https://render-express-blog.onrender.com/api/login',
             headers: { 
                 'Content-Type': 'application/json'
             },

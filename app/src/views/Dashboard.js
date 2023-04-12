@@ -45,7 +45,7 @@ export const Dashboard = () => {
     const getLastTen = async () => {
         var config = {
             method: 'get',
-            url: 'http://localhost:3000/api/getTen',
+            url: 'https://render-express-blog.onrender.com/api/getTen',
             headers: { 
                 'Content-Type': 'application/json'
             }

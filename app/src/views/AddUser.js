@@ -18,7 +18,7 @@ export const AddUser = ({title}) => {
         });
         var config = {
             method: 'post',
-            url: 'http://localhost:3000/api/signup',
+            url: 'https://render-express-blog.onrender.com/api/signup',
             headers: { 
                 'Content-Type': 'application/json'
             },

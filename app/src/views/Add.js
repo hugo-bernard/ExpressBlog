@@ -24,7 +24,7 @@ const Add = () => {
         const token = sessionStorage.getItem('userToken');
         var config = {
             method: 'get',
-            url: 'http://localhost:3000/api/getUser',
+            url: 'https://render-express-blog.onrender.com/api/getUser',
             headers: { 
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ const Add = () => {
         console.log(data)
         var config = {
             method: 'post',
-            url: 'http://localhost:3000/api/postArticle',
+            url: 'https://render-express-blog.onrender.com/api/postArticle',
             headers: { 
                 'Content-Type': 'application/json'
             },
@@ -95,7 +95,7 @@ const Add = () => {
         console.log(data)
         var config = {
             method: 'post',
-            url: 'http://localhost:3000/api/postArticle',
+            url: 'https://render-express-blog.onrender.com/api/postArticle',
             headers: { 
                 'Content-Type': 'application/json'
             },
